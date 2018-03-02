@@ -1,4 +1,4 @@
-% Exercise 3. Modify fem_for_poisson_1d.m to solve the Poisson problem with
+% Exercise 3. Modify fem_for_poisson_1d_ex3.m to solve the Poisson problem with
 % mixed boundary condition,
 %
 % -u''(x) = f(x) in \Omega \\
@@ -8,14 +8,14 @@
 % where \Gamma_D denotes the Dirichlet boundary, \Gamma_N denotes the 
 % Neumann boundary, and n is the outward unit normal vector.
 %
-% After you modify fem\_for\_poisson\_1d.m, run this code in command window.
+% After you modify fem_for_poisson_1d_ex3.m, run this code in command window.
 % >> fem_1d_exercise3()
 %
 %
 %
 % The following is the main code. If your code is right, the convergence
 % rate is k. 
-% You can also compare the solution obtained from fem_for_poisson_1d.m 
+% You can also compare the solution obtained from fem_for_poisson_1d_ex3.m 
 % with that from fem_for_poisson_1d_ex3_sol.m
 %
 % k = 1;
@@ -35,7 +35,7 @@
 %     n4nb = n4db(2);
 %     n4db = n4db(1);
 %     [M_R, S_R, D_R] = get_matrices_1d(k);
-%     u = fem_for_poisson_1d(c4n, n4e, n4db, n4nb, ind4e, M_R, S_R, f, u_D, u_N);
+%     u = fem_for_poisson_1d_ex3(c4n, n4e, n4db, n4nb, ind4e, M_R, S_R, f, u_D, u_N);
 %     error(j) = compute_error_fem_1d(c4n, ind4e, M_R, D_R, u, Du);
 % end
 % convergence_rate = (log(error(2:end)) - log(error(1:end-1))) ./ (log(h(2:end)) - log(h(1:end-1)));
